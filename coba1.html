@@ -14,16 +14,18 @@
   }
 </style>
 </head>
-<body onload="alert('Welcome')">
+<body onload="">
 <div id="gmb" onclick="ubah()">
   <img src="./assets/gabe.png" id="pic" width="400">
 </div>
 
   <div>
     <p id="coba"></p>
-    <p id="coba2"></p>
+    <p id="coba2">Namanya adalah <span id="span"></span></p>
   </div>
 
+  <input type="text" value="siapa dia?" id="input">
+  <input type="button" value="Enter" id="submit">
 
   <script>
     var ele = document.createElement("h2")
@@ -62,7 +64,15 @@
         
       })
 
-    
+    var submit = document.getElementById("submit")
+    var span = document.getElementById("span")
+    var input = document.getElementById("input")
+    function put(){
+      var text = input.value
+      span.innerHTML = text
+    }
+
+    submit.onclick = put
 
   </script>
 </body>
