@@ -27,6 +27,11 @@
   <input type="text" value="siapa dia?" id="input">
   <input type="button" value="Enter" id="submit">
 
+  <div>
+    <p id="ob1">Nama Pegawai : <span id="ob12"></span></p>
+    <p id="ob2">Nama Pekerja :<span id="ob22"></span></p>
+  </div>
+  
   <script>
     var ele = document.createElement("h2")
     var text = document.createTextNode("hello World! coba belajar")
@@ -42,7 +47,7 @@
     gambar.style.border = " 2px solid red";
     gambar.style.margin = " 50px";
     
-    bg.className =" warna";
+    bg.setAttribute("class"," warna")
     
 
     // bg.onclick= function(){
@@ -61,9 +66,11 @@
     bg.addEventListener('mouseleave', function () {
         bg.style.backgroundColor = "green"
         bg.style.padding = "0"
-        
-      })
+        })
 
+    var text2 = document.getElementById("coba2")
+    ele.appendChild(text2)
+    
     var submit = document.getElementById("submit")
     var span = document.getElementById("span")
     var input = document.getElementById("input")
@@ -71,9 +78,23 @@
       var text = input.value
       span.innerHTML = text
     }
-
     submit.onclick = put
 
+  var nama = new Object()
+   nama.Pekerja = " ALex"
+   nama.pegawai = " Munandar"
+   nama.getdata = function(){
+     return this.pegawai
+   }
+
+  var span1 = document.getElementById("ob12")
+  var span2 = document.getElementById("ob22")
+  var p2 = document.getElementById("ob2")
+  span1.innerHTML = nama.Pekerja
+  span2.innerHTML = nama.getdata()
+
+   
+   
   </script>
 </body>
 </html>
