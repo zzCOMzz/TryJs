@@ -43,36 +43,33 @@
     var bg = document.getElementById("gmb");
     var gambar = document.getElementById('pic');
     
+    //size gambar
     gambar.height= 400;
     gambar.style.border = " 2px solid red";
     gambar.style.margin = " 50px";
     
+    //set warna
     bg.setAttribute("class"," warna")
     
-
-    // bg.onclick= function(){
-    //   bg.style.backgroundColor = "grey";
-    //   bg.style.border = "2px solid yellow"
-    //  }
+    //function ubah warna
      function change() {
       bg.style.backgroundColor = "grey";
       bg.style.border = "2px solid yellow"
       bg.style.padding= "30px"
       
      } 
-
+     // gambar
     bg.addEventListener('mouseenter',change)
-
     bg.addEventListener('mouseleave', function () {
         bg.style.backgroundColor = "green"
         bg.style.padding = "0"
         })
 
+    //Size Text 'namanya adalah'
     var text2 = document.getElementById("coba2")
     ele.appendChild(text2)
     
-    var submit = document.getElementById("submit")
-    var span = document.getElementById("span")
+    //input text
     var input = document.getElementById("input")
     function put(){
       var text = input.value
