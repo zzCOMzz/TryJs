@@ -7,6 +7,9 @@
   <title>Document</title>
 
 <style>
+  *html{
+    margin : 0px;
+  }
   .warna{
     background: green;
     width: 500px;
@@ -34,7 +37,7 @@
   
   <script>
     var ele = document.createElement("h2")
-    var text = document.createTextNode("hello World! coba belajar")
+    var text = document.createTextNode("Hello World! coba belajar")
     var box = document.getElementById("coba")
 
     ele.appendChild(text);
@@ -48,6 +51,7 @@
     gambar.style.border = " 2px solid red";
     gambar.style.margin = " 50px";
     
+    
     //set warna
     bg.setAttribute("class"," warna")
     
@@ -56,13 +60,15 @@
       bg.style.backgroundColor = "grey";
       bg.style.border = "2px solid yellow"
       bg.style.padding= "30px"
-      
+      gambar.src = './assets/jack.png'
+      mouse.hover = "pointer"
      } 
      // gambar
     bg.addEventListener('mouseenter',change)
     bg.addEventListener('mouseleave', function () {
         bg.style.backgroundColor = "green"
         bg.style.padding = "0"
+        gambar.src ='./assets/gabe.png'
         })
 
     //Size Text 'namanya adalah'
@@ -75,8 +81,11 @@
       var text = input.value
       span.innerHTML = text
     }
-    submit.onclick = put
 
+    //ketika tombol submit ditekan
+    submit.onclick = put 
+
+// create object
   var nama = new Object()
    nama.Pekerja = " ALex"
    nama.pegawai = " Munandar"
@@ -90,6 +99,8 @@
   span1.innerHTML = nama.Pekerja
   span2.innerHTML = nama.getdata()
 
+  
+   
    
    
   </script>
